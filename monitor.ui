@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>892</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Monitor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1121</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="autoExpandDelay">
+     <number>0</number>
+    </property>
+    <property name="uniformRowHeights">
+     <bool>false</bool>
+    </property>
+    <property name="allColumnsShowFocus">
+     <bool>true</bool>
+    </property>
+    <property name="columnCount">
+     <number>2</number>
+    </property>
+    <attribute name="headerDefaultSectionSize">
+     <number>300</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Sensor</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string notr="true">2</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="PlotWidget" name="plotCpuWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>511</y>
+      <width>541</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="plotGpuWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>554</x>
+      <y>511</y>
+      <width>561</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1115</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
